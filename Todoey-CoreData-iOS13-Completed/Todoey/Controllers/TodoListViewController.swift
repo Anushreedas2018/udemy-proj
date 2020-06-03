@@ -60,7 +60,15 @@ class TodoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-
+        if let item = todoItems?[indexPath.row]{
+            do{ try realm.write{
+                item.done = !item.done
+            }
+        } catch {
+            print("Error saving done status \(error)")
+        }
+            
+            tableView.reloadData()
 //        context.delete(itemArray[indexPath.row])
 //        itemArray.remove(at: indexPath.row)
         
@@ -70,11 +78,11 @@ class TodoListViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-    }
+        }}
     
     //MARK: - Add New Items
     
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+         @IBAction  func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
 
@@ -124,7 +132,6 @@ class TodoListViewController: UITableViewController {
         tableView.reloadData()
 
     }
-
 }
 
 //MARK: - Search bar methods
@@ -162,3 +169,6 @@ class TodoListViewController: UITableViewController {
 //
 //
 //
+
+
+
