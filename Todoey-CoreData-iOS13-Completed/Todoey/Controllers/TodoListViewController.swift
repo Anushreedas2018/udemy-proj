@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class TodoListViewController: SwipeTableViewController {
     
@@ -24,7 +25,7 @@ class TodoListViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.separatorStyle = .none
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
 
         
@@ -45,6 +46,14 @@ class TodoListViewController: SwipeTableViewController {
        {
         
         cell.textLabel?.text = item.title
+        
+        
+        if let colour = UIColor(hexString: selectedCategory!.colour)?.darken(byPercentage:
+            CGFloat(indexPath.row)/CGFloat(todoItems!.count)){
+             cell.backgroundColor = colour
+            cell.textLabel?.textColor = ContrastColorOf(colour, returnFlat: true)
+            
+        }
         
         //Ternary operator ==>
         // value = condition ? valueIfTrue : valueIfFalse
