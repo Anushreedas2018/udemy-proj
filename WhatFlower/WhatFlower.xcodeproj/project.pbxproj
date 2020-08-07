@@ -13,6 +13,7 @@
 		C052694424DD37FE00D4BCB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C052694224DD37FE00D4BCB7 /* Main.storyboard */; };
 		C052694624DD380000D4BCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C052694524DD380000D4BCB7 /* Assets.xcassets */; };
 		C052694924DD380000D4BCB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C052694724DD380000D4BCB7 /* LaunchScreen.storyboard */; };
+		C052695124DD384800D4BCB7 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C052695024DD384800D4BCB7 /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C052694524DD380000D4BCB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C052694824DD380000D4BCB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C052694A24DD380000D4BCB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C052695024DD384800D4BCB7 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerClassifier.mlmodel; path = ../../FlowerClassify/FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C052694224DD37FE00D4BCB7 /* Main.storyboard */,
 				C052694524DD380000D4BCB7 /* Assets.xcassets */,
 				C052694724DD380000D4BCB7 /* LaunchScreen.storyboard */,
+				C052695024DD384800D4BCB7 /* FlowerClassifier.mlmodel */,
 				C052694A24DD380000D4BCB7 /* Info.plist */,
 			);
 			path = WhatFlower;
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C052695124DD384800D4BCB7 /* FlowerClassifier.mlmodel in Sources */,
 				C052694124DD37FE00D4BCB7 /* ViewController.swift in Sources */,
 				C052693D24DD37FE00D4BCB7 /* AppDelegate.swift in Sources */,
 				C052693F24DD37FE00D4BCB7 /* SceneDelegate.swift in Sources */,
